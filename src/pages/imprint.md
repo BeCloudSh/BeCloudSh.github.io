@@ -8,7 +8,7 @@ title: Imprint
 Information according to § 5 TMG
 <div class="[&_img]:!m-0 [&_img]:!inline-block">
 
-![Address](/imprint-address.png)
+![Address](/images/Imprint-address.png)
 
 </div>
 
