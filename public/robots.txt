@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block technical directories often used in build processes if they leak to public
+# (Astro usually handles this, but this is a safety net)
+Disallow: /_astro/
+Disallow: /404.html
+
+# Sitemap
+Sitemap: https://becloud.sh/sitemap-index.xml
