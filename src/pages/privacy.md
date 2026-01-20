@@ -24,7 +24,7 @@ The party responsible for this website (the "controller") for purposes of data p
 Information according to § 5 TMG
 <div class="[&_img]:!m-0 [&_img]:!inline-block">
 
-![Address](../assets/images/imprint-address.png)
+![Address](/imprint-address.png)
 
 </div>
 
