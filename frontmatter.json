@@ -31,11 +31,6 @@
           "type": "string"
         },
         {
-          "title": "slug",
-          "name": "slug",
-          "type": "string"
-        },
-        {
           "title": "Publishing date",
           "name": "pubDate",
           "type": "datetime",
