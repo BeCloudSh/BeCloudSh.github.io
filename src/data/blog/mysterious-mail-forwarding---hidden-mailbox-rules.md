@@ -1,6 +1,5 @@
 ---
 title: Mysterious Mail Forwarding - Hidden Mailbox Rules
-pubDate: 2026-02-10T14:16:56.830Z
 author: BeCloudSh
 pubDatetime: 2026-02-10T14:17:06.280Z
 description: Finding, Fixing and Understanding hidden Mailbox Rules. No more mysterious mail(box) behaviour.

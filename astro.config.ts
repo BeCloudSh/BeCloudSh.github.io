@@ -10,17 +10,19 @@ import {
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import { SITE } from "./src/config";
+import react from '@astrojs/react';
+import markdoc from "@astrojs/markdoc";
+import keystatic from "@keystatic/astro"
 
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  integrations: [
-    sitemap({
-      filter: page => SITE.showArchives || !page.endsWith("/archives") &&
-        page !== 'https://becloud.sh/imprint/' &&
-        page !== 'https://becloud.sh/privacy/',
-    }),
-  ],
+  integrations: [react(), markdoc(), keystatic(),
+  sitemap({
+    filter: page => SITE.showArchives || !page.endsWith("/archives") &&
+      page !== 'https://becloud.sh/imprint/' &&
+      page !== 'https://becloud.sh/privacy/',
+  }), markdoc()],
   markdown: {
     remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
     shikiConfig: {
@@ -59,9 +61,7 @@ export default defineConfig({
       }),
     },
   },
-  experimental: {
-    preserveScriptOrder: true,
-    fonts: [
+  fonts: [
       {
         name: "Google Sans Code",
         cssVariable: "--font-google-sans-code",
@@ -71,5 +71,4 @@ export default defineConfig({
         styles: ["normal", "italic"],
       },
     ],
-  },
 });
