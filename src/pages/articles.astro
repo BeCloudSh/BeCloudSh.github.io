@@ -1,0 +1,274 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Main from "@/layouts/Main.astro";
+import ArticleCard from "@/components/ArticleCard.astro";
+import { getMediumArticles } from "@/utils/getMediumArticles";
+import { SITE } from "@/config";
+import IconRss from "@/assets/icons/IconRss.svg";
+
+const articles = await getMediumArticles();
+
+const totalCount = articles.length;
+const techCount = articles.filter(a => !a.isPersonal).length;
+const personalCount = articles.filter(a => a.isPersonal).length;
+---
+
+<Layout title={`Articles | ${SITE.title}`}>
+  <Header />
+  <Main
+    pageTitle="Articles & Field Notes"
+    pageDesc="Writing on Microsoft Cloud architecture, security baselines, identity governance, and personal field notes."
+  >
+    <div class="mb-4 flex flex-wrap items-center justify-between gap-2 text-sm">
+      <span class="opacity-80">
+        Published on{" "}
+        <a
+          href="https://medium.com/@becloudsh"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-accent underline decoration-dashed underline-offset-4 hover:opacity-80"
+        >
+          Medium
+        </a>
+      </span>
+      <a
+        href="https://becloudsh.medium.com/feed"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 text-accent hover:underline"
+        aria-label="RSS Feed"
+      >
+        <IconRss width={16} height={16} class="stroke-accent" />
+        <span>RSS Feed</span>
+      </a>
+    </div>
+
+    <!-- Category Filter Switcher -->
+    <div
+      id="filter-container"
+      class="my-6 flex flex-wrap items-center gap-2 border-b border-border/50 pb-4"
+    >
+      <span
+        class="me-1 font-mono text-xs font-semibold text-foreground/60 uppercase"
+      >
+        Category:
+      </span>
+      <button
+        type="button"
+        data-filter="all"
+        class="filter-tab active rounded-md bg-accent px-3 py-1.5 font-mono text-xs font-medium text-background transition-all"
+        aria-pressed="true"
+      >
+        All Articles <span class="opacity-80">({totalCount})</span>
+      </button>
+      <button
+        type="button"
+        data-filter="tech"
+        class="filter-tab rounded-md border border-border/60 bg-muted/15 px-3 py-1.5 font-mono text-xs font-medium text-foreground/80 transition-all hover:border-accent hover:text-accent"
+        aria-pressed="false"
+      >
+        Cloud & Architecture <span class="opacity-80">({techCount})</span>
+      </button>
+      <button
+        type="button"
+        data-filter="personal"
+        class="filter-tab rounded-md border border-border/60 bg-muted/15 px-3 py-1.5 font-mono text-xs font-medium text-foreground/80 transition-all hover:border-accent hover:text-accent"
+        aria-pressed="false"
+      >
+        Personal Notes <span class="opacity-80">({personalCount})</span>
+      </button>
+    </div>
+
+    {
+      articles.length > 0 ? (
+        <>
+          <ul id="articles-list" class="divide-y divide-border/20">
+            {articles.map(article => (
+              <ArticleCard article={article} variant="h2" />
+            ))}
+          </ul>
+
+          {/* Filtered Empty State */}
+          <div
+            id="empty-filtered-state"
+            class="my-12 hidden rounded-lg border border-border/50 bg-background/50 p-8 text-center"
+          >
+            <p class="text-lg font-medium text-foreground" id="empty-title">
+              No articles in this category yet.
+            </p>
+            <p class="mt-2 text-sm text-foreground/75" id="empty-desc">
+              Articles published on Medium with relevant topic tags will
+              automatically appear here.
+            </p>
+            <a
+              href="https://medium.com/@becloudsh"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-6 inline-flex items-center gap-2 rounded border border-border px-4 py-2 font-mono text-sm text-accent transition-colors hover:border-accent hover:bg-muted/10"
+            >
+              <span>Visit Medium Profile (@becloudsh)</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </a>
+          </div>
+        </>
+      ) : (
+        <div class="my-12 rounded-lg border border-border/50 bg-background/50 p-8 text-center">
+          <p class="text-lg font-medium text-foreground">
+            Articles are on the way!
+          </p>
+          <p class="mt-2 text-sm opacity-80">
+            Fresh field notes and architecture deep-dives are currently in the
+            works on Medium.
+          </p>
+          <a
+            href="https://medium.com/@becloudsh"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-6 inline-flex items-center gap-2 rounded border border-border px-4 py-2 font-mono text-sm text-accent transition-colors hover:border-accent hover:bg-muted/10"
+          >
+            <span>Follow @becloudsh on Medium</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="size-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="7" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </svg>
+          </a>
+        </div>
+      )
+    }
+  </Main>
+  <Footer />
+</Layout>
+
+<script>
+  function setupArticleFilter() {
+    const filterTabs =
+      document.querySelectorAll<HTMLButtonElement>(".filter-tab");
+    const articleItems =
+      document.querySelectorAll<HTMLElement>(".article-item");
+    const emptyState = document.getElementById("empty-filtered-state");
+    const emptyTitle = document.getElementById("empty-title");
+    const emptyDesc = document.getElementById("empty-desc");
+
+    if (!filterTabs.length) return;
+
+    function applyFilter(filter: string, updateUrl = true) {
+      let visibleCount = 0;
+
+      filterTabs.forEach(tab => {
+        const isCurrent = tab.dataset.filter === filter;
+        tab.setAttribute("aria-pressed", isCurrent ? "true" : "false");
+        if (isCurrent) {
+          tab.classList.add("bg-accent", "text-background");
+          tab.classList.remove(
+            "border",
+            "border-border/60",
+            "bg-muted/15",
+            "text-foreground/80"
+          );
+        } else {
+          tab.classList.remove("bg-accent", "text-background");
+          tab.classList.add(
+            "border",
+            "border-border/60",
+            "bg-muted/15",
+            "text-foreground/80"
+          );
+        }
+      });
+
+      articleItems.forEach(item => {
+        const isPersonal = item.dataset.personal === "true";
+        let show = false;
+
+        if (filter === "all") {
+          show = true;
+        } else if (filter === "tech") {
+          show = !isPersonal;
+        } else if (filter === "personal") {
+          show = isPersonal;
+        }
+
+        if (show) {
+          item.style.display = "";
+          visibleCount++;
+        } else {
+          item.style.display = "none";
+        }
+      });
+
+      if (emptyState) {
+        if (visibleCount === 0 && articleItems.length > 0) {
+          emptyState.classList.remove("hidden");
+          if (filter === "personal") {
+            if (emptyTitle)
+              emptyTitle.textContent = "No personal notes found yet.";
+            if (emptyDesc)
+              emptyDesc.textContent =
+                "Stories published on Medium with tags like #personal, #travel, #dining, or #field-notes will automatically appear here.";
+          } else if (filter === "tech") {
+            if (emptyTitle)
+              emptyTitle.textContent = "No technical articles found yet.";
+            if (emptyDesc)
+              emptyDesc.textContent =
+                "Technical deep dives on Microsoft Cloud & Security published on Medium will appear here.";
+          }
+        } else {
+          emptyState.classList.add("hidden");
+        }
+      }
+
+      if (updateUrl) {
+        const url = new URL(window.location.href);
+        if (filter === "all") {
+          url.searchParams.delete("filter");
+        } else {
+          url.searchParams.set("filter", filter);
+        }
+        window.history.replaceState({}, "", url.toString());
+      }
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialParam =
+      urlParams.get("filter") || window.location.hash.replace("#", "");
+    const validFilters = ["all", "tech", "personal"];
+    const initialFilter = validFilters.includes(initialParam)
+      ? initialParam
+      : "all";
+
+    applyFilter(initialFilter, false);
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        const filter = tab.dataset.filter || "all";
+        applyFilter(filter, true);
+      });
+    });
+  }
+
+  setupArticleFilter();
+  document.addEventListener("astro:after-swap", setupArticleFilter);
+</script>

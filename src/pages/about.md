@@ -3,33 +3,30 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+I am an IT Consultant and Architect specializing in **Microsoft 365 Workplace & Collaboration**, Cloud Security, and AI Governance.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+My focus is on bridging Microsoft Cloud architecture, modern AI capabilities, and human systems. I help organizations turn complex cloud stacks into clear, scalable, and secure operating platforms rather than disconnected services.
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+## Core Focus Areas
 
-## Features
+- **Microsoft 365 Architecture & Strategy:** Target architecture design, tenant foundations, governance models, and long-term service roadmaps.
+- **Identity, Access & RBAC:** Practical least-privilege models spanning Entra ID, PIM, Administrative Units, Intune, Defender, and Purview.
+- **Security & Data Protection:** Zero Trust baselines, Defender XDR architecture, mail security modernization, and Purview information protection.
+- **Tenant Transformation:** Structured tenant-to-tenant migrations, consolidation, and modernization with risk-controlled cutover planning.
+- **AI Governance:** Layered governance frameworks connecting business accountability, data permissions, agent lifecycle, and monitoring.
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+## Human Systems & Technical Facilitation
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+Technical problems often require human solutions. Alongside architecture and security engineering, I care deeply about workshop moderation, visual facilitation, and helping teams build systems that they can realistically sustain and operate.
 
-and so much more.
+## Certifications & Knowledge Stack
 
-## Show your support
+- **SC-100:** Microsoft Cybersecurity Architect
+- **SC-300:** Microsoft Identity and Access Administrator
+- **Microsoft 365 E5 Stack & Defender XDR**
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+## Connect & Collaborate
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
-
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
-
-Kyay zuu! 🙏🏼
+- **Email:** [info@becloud.sh](mailto:info@becloud.sh)
+- **LinkedIn:** [Benedikt Scheckenbach](https://www.linkedin.com/in/benedikt-scheckenbach-3493ab1b8/)
+- **Writing & Articles:** [Medium (@becloudsh)](https://medium.com/@becloudsh)

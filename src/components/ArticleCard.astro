@@ -1,0 +1,58 @@
+---
+import Datetime from "./Datetime.astro";
+import type { MediumArticle } from "@/utils/getMediumArticles";
+
+type Props = {
+  article: MediumArticle;
+  variant?: "h2" | "h3";
+};
+
+const { article, variant: Heading = "h3" } = Astro.props;
+const { title, link, pubDate, snippet, categories, isPersonal } = article;
+---
+
+<li
+  class="article-item my-6 rounded-lg border border-border/40 bg-background/50 p-5 transition-colors hover:border-accent/60"
+  data-personal={isPersonal ? "true" : "false"}
+>
+  <div class="flex flex-col gap-2">
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-1.5 text-lg font-medium text-accent decoration-dashed underline-offset-4 hover:underline sm:text-xl"
+    >
+      <Heading class="inline">{title}</Heading>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="size-4 shrink-0 opacity-70"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line x1="7" y1="17" x2="17" y2="7"></line>
+        <polyline points="7 7 17 7 17 17"></polyline>
+      </svg>
+    </a>
+    <Datetime pubDatetime={pubDate} />
+    {
+      snippet && (
+        <p class="mt-1 text-sm leading-relaxed opacity-90">{snippet}</p>
+      )
+    }
+    {
+      categories && categories.length > 0 && (
+        <div class="mt-2 flex flex-wrap gap-2">
+          {categories.map(cat => (
+            <span class="rounded bg-muted/20 px-2 py-0.5 font-mono text-xs text-foreground/80">
+              #{cat}
+            </span>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</li>
