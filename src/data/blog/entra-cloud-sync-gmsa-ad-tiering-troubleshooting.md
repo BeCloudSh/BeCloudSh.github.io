@@ -1,3 +1,14 @@
+---
+title: Microsoft Entra Cloud Sync gMSA Setup Fails with 0x8007200A Due to AD Tiering
+author: BeCloudSh
+pubDatetime: 2026-008-20T04:06:31Z
+slug: entra-cloud-sync-gsma-error
+draft: true
+tags:
+  - Entra
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est
+---
+
 # Microsoft Entra Cloud Sync: gMSA Setup Fails with `0x8007200A` Due to AD Tiering
 
 ## Overview
