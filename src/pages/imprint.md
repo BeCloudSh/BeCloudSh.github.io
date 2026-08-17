@@ -6,6 +6,7 @@ title: Imprint
 # Legal Disclosure
 
 Information according to § 5 TMG
+
 <div class="[&_img]:!m-0 [&_img]:!inline-block">
 
 ![Address](../assets/images/Imprint-address.png)

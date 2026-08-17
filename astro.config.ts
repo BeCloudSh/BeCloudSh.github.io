@@ -16,9 +16,11 @@ export default defineConfig({
   site: SITE.website,
   integrations: [
     sitemap({
-      filter: page => SITE.showArchives || !page.endsWith("/archives") &&
-        page !== 'https://becloud.sh/imprint/' &&
-        page !== 'https://becloud.sh/privacy/',
+      filter: page =>
+        SITE.showArchives ||
+        (!page.endsWith("/archives") &&
+          page !== "https://becloud.sh/imprint/" &&
+          page !== "https://becloud.sh/privacy/"),
     }),
   ],
   markdown: {
@@ -59,15 +61,14 @@ export default defineConfig({
       }),
     },
   },
-  
-    fonts: [
-      {
-        name: "Google Sans Code",
-        cssVariable: "--font-google-sans-code",
-        provider: fontProviders.google(),
-        fallbacks: ["monospace"],
-        weights: [300, 400, 500, 600, 700],
-        styles: ["normal", "italic"],
-      },
-    ],
+  fonts: [
+    {
+      name: "Google Sans Code",
+      cssVariable: "--font-google-sans-code",
+      provider: fontProviders.google(),
+      fallbacks: ["monospace"],
+      weights: [300, 400, 500, 600, 700],
+      styles: ["normal", "italic"],
+    },
+  ],
 });

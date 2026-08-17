@@ -256,11 +256,11 @@ Get-WinEvent `
 
 Typical meanings include:
 
-| Event | Message | Likely direction |
-|---|---|---|
-| 9001 | Encryption types are not supported | Compare the server and gMSA Kerberos encryption settings |
-| 9002 | Access denied | Check whether the computer is authorized to retrieve the gMSA password |
-| 9002 | Object not found | Check DC visibility, replication, account lifecycle and the installation security context |
+| Event | Message                            | Likely direction                                                                          |
+| ----- | ---------------------------------- | ----------------------------------------------------------------------------------------- |
+| 9001  | Encryption types are not supported | Compare the server and gMSA Kerberos encryption settings                                  |
+| 9002  | Access denied                      | Check whether the computer is authorized to retrieve the gMSA password                    |
+| 9002  | Object not found                   | Check DC visibility, replication, account lifecycle and the installation security context |
 
 The event text should be treated as the primary diagnostic signal. The final wizard exception may only represent a failed follow-up check.
 

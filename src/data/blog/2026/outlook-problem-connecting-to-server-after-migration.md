@@ -11,8 +11,8 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
 
 ## Table of contents
 
-
 ## Error Details
+
 ![Error Details](../../../assets/images/blog/2026-01-outlook-problem-connecting-to-server.png)
 
 ## Solution
@@ -26,7 +26,7 @@ Check that the Following is not set:
 HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Outlook\Autodiscover
 DWORD: ExcludeLastKnownGoodUrl
 Value: 1
- 
+
 Clear all Identities
 Remove everything under HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Identity\Identities
 

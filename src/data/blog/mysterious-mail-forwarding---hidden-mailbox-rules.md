@@ -5,10 +5,10 @@ author: BeCloudSh
 pubDatetime: 2026-02-10T14:17:06.280Z
 description: Finding, Fixing and Understanding hidden Mailbox Rules. No more mysterious mail(box) behaviour.
 tags:
-    - Exchange Online
-    - M365
-    - Troubleshooting
-    - Failed Research
+  - Exchange Online
+  - M365
+  - Troubleshooting
+  - Failed Research
 slug: mysterious-mail-forwarding-hidden-mailbox-rules
 draft: true
 ---

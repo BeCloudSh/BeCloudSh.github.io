@@ -22,6 +22,7 @@ III. Information about the data processing
 The party responsible for this website (the "controller") for purposes of data protection law is:
 
 Information according to § 5 TMG
+
 <div class="[&_img]:!m-0 [&_img]:!inline-block">
 
 ![Address](../assets/images/Imprint-address.png)
@@ -32,11 +33,11 @@ Information according to § 5 TMG
 
 With regard to the data processing to be described in more detail below, users and data subjects have the right:
 
-* to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR);
-* to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR);
-* to the immediate deletion of data concerning them (cf. also [Art. 17 DSGVO](http://dejure.org/gesetze/DSGVO/17.html)), or, alternatively, further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR;
-* to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR);
-* to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR).
+- to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR);
+- to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR);
+- to the immediate deletion of data concerning them (cf. also [Art. 17 DSGVO](http://dejure.org/gesetze/DSGVO/17.html)), or, alternatively, further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR;
+- to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR);
+- to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR).
 
 In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.
 
@@ -151,26 +152,32 @@ After the customer has been forwarded, information about the user is recorded by
 The following social media are linked by the provider:
 
 #### Facebook
+
 Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Ireland.  
 Privacy Policy: [https://www.facebook.com/policy.php](https://www.facebook.com/policy.php)
 
 #### Instagram
+
 Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2, Ireland.  
 Privacy Policy: [https://help.instagram.com/519522125107875](https://help.instagram.com/519522125107875)
 
 #### LinkedIn
+
 LinkedIn Ireland Unlimited Company, Wilton Plaza, Wilton Place, Dublin 2, Ireland, a subsidiary of LinkedIn Corporation, 1000 W. Maude Avenue, Sunnyvale, CA 94085 USA.  
 Privacy Policy: [https://www.linkedin.com/legal/privacy-policy](https://www.linkedin.com/legal/privacy-policy)
 
 #### Pinterest
+
 Pinterest Inc., 651 Brannan Street, San Francisco, CA, 94107, USA.  
 Privacy Policy: [https://policy.pinterest.com/de/privacy-policy](https://policy.pinterest.com/de/privacy-policy)
 
 #### X
+
 Twitter International Unlimited Company, One Cumberland Place, Fenian Street, Dublin 2, D02 AX07, Ireland.  
 Privacy Policy: [https://x.com/de/privacy](https://x.com/de/privacy)
 
 #### YouTube
+
 Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland, a subsidiary of Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043 USA.  
 Privacy Policy: [https://policies.google.com/privacy](https://policies.google.com/privacy)
 
@@ -244,13 +251,13 @@ The legal basis for collecting and processing this information is Art. 6 Para. 1
 
 If you access our website, your queries are forwarded to CloudFlare servers. Statistical access data about your visit to our website is collected and CloudFlare stores a cookie on your terminal device via your browser. Access data includes:
 
-* your IP address;
-* the page(s) on our site that you access;
-* type and version of internet browser you are using;
-* your operating system;
-* the website from which you came prior to visiting our website (referrer URL);
-* your length of stay on our site; and
-* the frequency with which our pages are accessed.
+- your IP address;
+- the page(s) on our site that you access;
+- type and version of internet browser you are using;
+- your operating system;
+- the website from which you came prior to visiting our website (referrer URL);
+- your length of stay on our site; and
+- the frequency with which our pages are accessed.
 
 The data is used by CloudFlare for statistical evaluations of the accesses as well as for the security and optimization of the offer.
 
@@ -322,6 +329,6 @@ For the purpose of functionality and analysis of usage behavior, YouTube permane
 Further information about the collection and use of data as well as your rights and protection options in Google’s privacy policy found at:  
 [https://policies.google.com/privacy](https://policies.google.com/privacy)
 
-***
+---
 
 [Model Data Protection Statement](https://www.generator-datenschutzerklärung.de) for [Anwaltskanzlei Weiß & Partner](https://www.bewertung-löschen24.de)
