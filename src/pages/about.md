@@ -3,7 +3,7 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-I am an IT Consultant and Architect specializing in **Microsoft 365 Workplace & Collaboration**, Cloud Security, and AI Governance.
+I am a Cloud & Security Consultant specializing in **Microsoft 365 Workplace & Collaboration**, Cloud Security, and AI Governance.
 
 My focus is on bridging Microsoft Cloud architecture, modern AI capabilities, and human systems. I help organizations turn complex cloud stacks into clear, scalable, and secure operating platforms rather than disconnected services.
 
@@ -29,4 +29,4 @@ Technical problems often require human solutions. Alongside architecture and sec
 
 - **Email:** [info@becloud.sh](mailto:info@becloud.sh)
 - **LinkedIn:** [Benedikt Scheckenbach](https://www.linkedin.com/in/benedikt-scheckenbach-3493ab1b8/)
-- **Writing & Articles:** [Medium (@becloudsh](https://blog.becloud.sh)
+- **Writing & Articles:** [blog.becloud.sh](https://blog.becloud.sh)

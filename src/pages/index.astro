@@ -12,68 +12,60 @@ import { SOCIALS } from "@/constants";
 const allArticles = await getMediumArticles();
 const recentArticles = allArticles.slice(0, 3);
 
-const services = [
+const specializations = [
   {
-    title: "Microsoft 365 Strategy & Architecture",
+    title: "Microsoft 365 Strategy & Target Platforms",
     description:
-      "I help organizations turn Microsoft 365 into a clear, scalable platform rather than a collection of disconnected services. This includes target architecture, governance, security design, tenant foundations, service roadmaps, and the definition of responsibilities and operating models.",
-    engagements: [
-      "Microsoft 365 strategy and target architecture",
-      "Tenant and identity foundations",
-      "Governance and operating models",
-      "Security and compliance roadmaps",
-      "Architecture reviews and decision papers",
+      "Viewing Microsoft 365 not as a loose collection of disconnected apps, but as an integrated, scalable operating environment. I focus on establishing clean tenant foundations, clear service boundaries, and manageable operating models that balance user productivity with strong baseline governance.",
+    principles: [
+      "Ecosystem thinking over fragmented tool adoption",
+      "Tenant foundations, identity boundaries, and operating models",
+      "Resilient governance frameworks that scale with the organization",
+      "Actionable architecture reviews and strategic decision papers",
     ],
   },
   {
-    title: "Identity, Access & RBAC Architecture",
+    title: "Identity, Access & RBAC Design",
     description:
-      "I design practical access-control models across Microsoft Entra ID, Intune, Microsoft Defender, Exchange Online, and Microsoft Purview. My focus is on least privilege, Privileged Identity Management, administrative boundaries, meaningful separation of duties, and an operating model that teams can actually maintain.",
-    engagements: [
-      "Cross-platform Microsoft cloud RBAC",
-      "Entra ID and PIM role design",
-      "Administrative Units and scoped administration",
-      "Privileged access and emergency-access concepts",
-      "Role matrices, implementation plans, and governance processes",
+      "Designing practical access-control and authorization models across Microsoft Entra ID, Intune, Defender, Exchange Online, and Purview. My emphasis is on enforcing strict least privilege and Privileged Identity Management while keeping day-to-day operations sustainable for engineering teams.",
+    principles: [
+      "Cross-platform least privilege without operational bottlenecks",
+      "Scoped administration via Administrative Units and PIM",
+      "Privileged access strategies and emergency-access concepts",
+      "Maintainable role matrices and clear administrative separation",
     ],
   },
   {
-    title: "Microsoft 365 Security & Data Protection",
+    title: "Cloud Security & Zero Trust Baselines",
     description:
-      "I assess and improve Microsoft 365 security across identity, endpoints, email, collaboration, and data. This includes tenant security assessments, Zero Trust-aligned security baselines, Defender architecture, mail-security modernization, Microsoft Purview, and prioritized remediation roadmaps.",
-    engagements: [
-      "Microsoft 365 security assessments",
-      "Zero Trust and security baseline design",
-      "Microsoft Defender architecture",
+      "Strengthening enterprise resilience across identities, endpoints, collaboration data, and messaging infrastructure. Moving past compliance checkboxes to build defense-in-depth postures with Microsoft Defender XDR and Purview information protection.",
+    principles: [
+      "Zero Trust-aligned security baselines and posture assessments",
+      "Unified Microsoft Defender XDR architecture",
       "Exchange Online and mail-security modernization",
-      "Microsoft Purview information protection and governance",
-      "Prioritized remediation and implementation roadmaps",
+      "Practical data protection, sensitivity labeling, and governance",
     ],
   },
   {
-    title: "Tenant Transformation & Migration",
+    title: "Tenant Transformations & Systems Evolution",
     description:
-      "I plan and steer Microsoft 365 tenant transformations, including tenant-to-tenant migrations, Exchange Online transitions, tenant separation, and the modernization of identity and endpoint management. I focus on migration sequencing, dependencies, security, user impact, validation, and clearly defined decision points.",
-    engagements: [
-      "Microsoft 365 tenant-to-tenant migrations",
-      "Exchange Online migrations",
-      "Tenant separation and consolidation",
-      "Migration architecture and cutover planning",
-      "Security and compliance considerations",
-      "Technical project coordination and implementation governance",
+      "Guiding organizations through high-stakes tenant transformations—from M&A separations to tenant consolidations and workload modernizations. Emphasizing risk mitigation, dependency mapping, data integrity, and clear validation checkpoints.",
+    principles: [
+      "Dependency-first migration sequencing and wave planning",
+      "Identity transition and cutover architecture",
+      "Data compliance, legal-hold considerations, and auditability",
+      "Structured validation criteria and technical implementation governance",
     ],
   },
 ];
 
-const projects = [
+const experiences = [
   {
-    title: "Enterprise Microsoft Cloud RBAC Architecture",
-    challenge:
-      "A globally distributed organization needed a consistent authorization model across multiple Microsoft cloud services. Regional teams required enough access to operate independently, while security-critical responsibilities had to remain centrally governed.",
+    title: "Global Cloud RBAC & Scoped Governance",
+    context:
+      "A globally distributed organization needed a consistent authorization model across multiple Microsoft cloud services. The key challenge was giving regional teams enough autonomy to manage local resources without granting tenant-wide admin rights or creating security blind spots.",
     solution:
-      "Designed an end-to-end RBAC and governance architecture covering Entra ID, Intune, Defender, Exchange Online, Purview, PIM, and emergency-access accounts. Limited separation of duties to security-critical areas so regional teams could reliably sustain operations.",
-    impact:
-      "Created a production-oriented authorization model that balances least privilege, central governance, and regional operability.",
+      "Engineered an end-to-end RBAC and governance model covering Entra ID, Intune, Defender, Exchange Online, Purview, PIM, and emergency-access accounts. Decoupled tenant-wide authority from regional duties, establishing a production-ready balance between centralized oversight and regional operability.",
     technologies: [
       "Microsoft Entra ID",
       "PIM",
@@ -85,13 +77,11 @@ const projects = [
     ],
   },
   {
-    title: "Microsoft 365 Tenant-to-Tenant Migration Architecture",
-    challenge:
-      "An organizational transition required Microsoft 365 workloads and user environments to be moved between tenants without losing sight of security, compliance, usability, and operational continuity.",
+    title: "Complex Multi-Tenant Transformation & Migration",
+    context:
+      "An organizational restructuring required Microsoft 365 workloads and user environments to transition between distinct tenants without disrupting security, compliance, or daily business continuity.",
     solution:
-      "Developed a structured migration approach covering pilot and wave planning, identity dependencies, Teams/SharePoint/OneDrive cutovers, legal-hold limitations, auditability, and clear points of no return.",
-    impact:
-      "Established a controlled migration framework with transparent dependencies, validation criteria, and cutover decisions that gave technical teams and PMs a common steering foundation.",
+      "Designed a phased migration framework covering identity dependencies, Teams/SharePoint/OneDrive cutovers, legal-hold continuity, audit trails, and explicit points of no return. Provided technical teams and leadership with a transparent steering foundation throughout cutovers.",
     technologies: [
       "Microsoft 365",
       "Microsoft Entra ID",
@@ -103,13 +93,11 @@ const projects = [
     ],
   },
   {
-    title: "Microsoft 365 Security & Mail Protection Modernization",
-    challenge:
-      "A distributed organization needed to harmonize Microsoft 365 and email-security controls, reduce fragmented administration, and establish a clearer strategic direction for future mail protection and data security.",
+    title: "Mail Protection Modernization & Defender Integration",
+    context:
+      "A distributed enterprise faced fragmented mail security tools and inconsistent policy enforcement, creating operational friction and administrative blind spots.",
     solution:
-      "Developed a security-oriented target approach combining Defender for Office 365, Exchange Online protection, identity controls, Purview, and tenant-wide security baselines.",
-    impact:
-      "Created a decision-oriented foundation for consolidating controls, reducing operational fragmentation, and moving toward an integrated security architecture.",
+      "Consolidated mail protection into a cohesive architecture utilizing Defender for Office 365, Exchange Online Protection, identity controls, and tenant-wide security baselines—establishing an integrated telemetry pipeline and reducing tooling complexity.",
     technologies: [
       "Exchange Online",
       "Defender for Office 365",
@@ -119,13 +107,11 @@ const projects = [
     ],
   },
   {
-    title: "Microsoft 365 AI Governance",
-    challenge:
-      "Organizations are introducing Microsoft 365 Copilot and custom agents faster than their governance, identity, data-protection, and lifecycle processes are evolving.",
+    title: "Layered AI Governance & Copilot Foundations",
+    context:
+      "Organizations are introducing Microsoft 365 Copilot and autonomous agents faster than their underlying data-permission, identity, and lifecycle governance frameworks are evolving.",
     solution:
-      "Designed a layered governance model that connects business accountability, data permissions, agent identities, least privilege, Purview protection, Defender monitoring, and agent lifecycle ownership.",
-    impact:
-      "Provides organizations with a structured model for adopting AI capabilities with proactive governance, preventing orphaned agents and data oversharing.",
+      "Developed a layered governance framework connecting business accountability, least-privilege data permissions, agent identities, Purview data protection, and Defender monitoring—ensuring secure adoption while preventing data oversharing and orphaned agents.",
     technologies: [
       "Microsoft 365 Copilot",
       "Copilot Studio",
@@ -150,7 +136,7 @@ const projects = [
         <span
           class="font-mono text-sm font-semibold tracking-wider text-accent uppercase"
         >
-          Consultant Workplace & Collaboration
+          Cloud & Security Consultant
         </span>
         <h1
           class="text-3xl font-bold tracking-tight text-foreground sm:text-5xl"
@@ -231,7 +217,7 @@ const projects = [
           </span>
           <h2 class="mt-1 text-2xl font-bold sm:text-3xl">Recent Articles</h2>
           <p class="mt-1 text-sm text-foreground/80">
-            Directly syndicated from Medium at build time.
+            Directly syndicated from the blog at build time.
           </p>
         </div>
         <a
@@ -253,7 +239,7 @@ const projects = [
         ) : (
           <div class="my-6 rounded-lg border border-border/50 bg-background/50 p-6 text-center">
             <p class="text-base font-medium text-foreground">
-              New articles are being drafted on Medium.
+              New articles are being drafted on the blog.
             </p>
             <p class="mt-1 text-xs text-foreground/75 sm:text-sm">
               Follow along for upcoming insights on Microsoft 365 Architecture,
@@ -273,43 +259,46 @@ const projects = [
       }
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="border-b border-border py-12 sm:py-16">
+    <!-- Technical Specializations Section -->
+    <section id="specializations" class="border-b border-border py-12 sm:py-16">
       <div class="mb-8">
         <span
           class="font-mono text-xs font-semibold tracking-wider text-accent uppercase"
         >
-          Capabilities
+          Philosophy & Focus
         </span>
-        <h2 class="mt-1 text-2xl font-bold sm:text-3xl">Consulting Services</h2>
+        <h2 class="mt-1 text-2xl font-bold sm:text-3xl">
+          Technical Specializations
+        </h2>
         <p class="mt-2 text-sm text-foreground/80 sm:text-base">
-          Architecture, governance, and security consulting designed for
-          sustainable operations and clear decision-making.
+          Engineering principles and focus areas guiding my work across
+          Microsoft cloud environments, identity systems, and organizational
+          transformations.
         </p>
       </div>
 
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
         {
-          services.map(service => (
+          specializations.map(item => (
             <div class="flex flex-col justify-between rounded-lg border border-border/70 bg-background/50 p-6 transition-all hover:border-accent/80 hover:shadow-sm">
               <div>
                 <h3 class="font-mono text-lg font-semibold text-foreground">
-                  {service.title}
+                  {item.title}
                 </h3>
                 <p class="mt-3 text-sm leading-relaxed text-foreground/85">
-                  {service.description}
+                  {item.description}
                 </p>
               </div>
 
               <div class="mt-6 border-t border-border/40 pt-4">
                 <span class="font-mono text-xs font-semibold tracking-wide text-foreground/70 uppercase">
-                  Typical Engagements
+                  Key Principles & Focus
                 </span>
                 <ul class="mt-2.5 space-y-1.5 text-xs text-foreground/80">
-                  {service.engagements.map(item => (
+                  {item.principles.map(principle => (
                     <li class="flex items-start gap-2">
                       <span class="font-bold text-accent select-none">›</span>
-                      <span>{item}</span>
+                      <span>{principle}</span>
                     </li>
                   ))}
                 </ul>
@@ -320,62 +309,56 @@ const projects = [
       </div>
     </section>
 
-    <!-- Projects / Case Studies Section -->
-    <section id="projects" class="border-b border-border py-12 sm:py-16">
+    <!-- Selected Architectural Work Section -->
+    <section id="experience" class="border-b border-border py-12 sm:py-16">
       <div class="mb-8">
         <span
           class="font-mono text-xs font-semibold tracking-wider text-accent uppercase"
         >
-          Case Studies
+          Field Experience
         </span>
-        <h2 class="mt-1 text-2xl font-bold sm:text-3xl">Featured Projects</h2>
+        <h2 class="mt-1 text-2xl font-bold sm:text-3xl">
+          Selected Architectural Work
+        </h2>
         <p class="mt-2 text-sm text-foreground/80 sm:text-base">
-          Selected architectural frameworks, transformations, and security
-          modernization projects.
+          A closer look at real-world systems, architectural trade-offs, and
+          technical challenges solved in production.
         </p>
       </div>
 
       <div class="space-y-8">
         {
-          projects.map(project => (
+          experiences.map(item => (
             <div class="rounded-lg border border-border/70 bg-background/50 p-6 transition-all hover:border-accent/80 sm:p-7">
               <h3 class="font-mono text-xl font-bold text-foreground">
-                {project.title}
+                {item.title}
               </h3>
 
-              <div class="mt-4 grid grid-cols-1 gap-4 text-sm sm:grid-cols-2">
-                <div class="rounded border border-border/40 bg-muted/15 p-3.5">
-                  <span class="mb-1 block font-mono text-xs font-semibold text-accent uppercase">
-                    The Challenge
+              <div class="mt-4 space-y-4 text-sm">
+                <div class="rounded border border-border/40 bg-muted/15 p-4">
+                  <span class="mb-1.5 block font-mono text-xs font-semibold text-accent uppercase">
+                    Context & Complexity
                   </span>
                   <p class="text-xs leading-relaxed text-foreground/85 sm:text-sm">
-                    {project.challenge}
+                    {item.context}
                   </p>
                 </div>
-                <div class="rounded border border-border/40 bg-muted/15 p-3.5">
-                  <span class="mb-1 block font-mono text-xs font-semibold text-accent uppercase">
-                    The Impact
-                  </span>
-                  <p class="text-xs leading-relaxed text-foreground/85 sm:text-sm">
-                    {project.impact}
-                  </p>
-                </div>
-              </div>
 
-              <div class="mt-4">
-                <span class="mb-1 block font-mono text-xs font-semibold text-foreground/70 uppercase">
-                  Architecture & Solution
-                </span>
-                <p class="text-xs leading-relaxed text-foreground/85 sm:text-sm">
-                  {project.solution}
-                </p>
+                <div class="rounded border border-border/40 bg-muted/15 p-4">
+                  <span class="mb-1.5 block font-mono text-xs font-semibold text-accent uppercase">
+                    Architectural Insight & Approach
+                  </span>
+                  <p class="text-xs leading-relaxed text-foreground/85 sm:text-sm">
+                    {item.solution}
+                  </p>
+                </div>
               </div>
 
               <div class="mt-5 flex flex-wrap items-center gap-1.5 border-t border-border/30 pt-3">
                 <span class="me-1 font-mono text-xs text-foreground/60">
                   Stack:
                 </span>
-                {project.technologies.map(tech => (
+                {item.technologies.map(tech => (
                   <span class="rounded border border-border/30 bg-muted/25 px-2 py-0.5 font-mono text-[11px] text-foreground/80">
                     {tech}
                   </span>
@@ -401,9 +384,10 @@ const projects = [
           Start a Conversation
         </h2>
         <p class="mt-3 text-sm leading-relaxed text-foreground/85 sm:text-base">
-          Whether you are planning an M365 tenant migration, reviewing your
-          cloud security posture, or establishing AI governance frameworks—feel
-          free to reach out.
+          I'm always open to discussing complex cloud architecture, AI
+          governance, and distributed systems. Whether you'd like to talk tech,
+          exchange field notes, or share travel and dining dispatches—feel free
+          to drop a line.
         </p>
 
         <div class="mt-6 flex justify-center gap-4">
