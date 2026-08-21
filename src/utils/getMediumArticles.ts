@@ -59,7 +59,7 @@ const parser = new Parser({
 
 export async function getMediumArticles(): Promise<MediumArticle[]> {
   try {
-    const res = await fetch("https://becloudsh.medium.com/feed", {
+    const res = await fetch("https://blog.becloud.sh/feed", {
       headers: {
         "User-Agent": "Mozilla/5.0 (compatible; BeCloudSh/1.0)",
         Accept: "application/rss+xml, application/xml, text/xml, */*",
@@ -68,7 +68,7 @@ export async function getMediumArticles(): Promise<MediumArticle[]> {
 
     if (!res.ok) {
       // eslint-disable-next-line no-console
-      console.warn(`Medium RSS returned HTTP ${res.status}: ${res.statusText}`);
+      console.warn(`Blog RSS returned HTTP ${res.status}: ${res.statusText}`);
       return [];
     }
 
@@ -93,9 +93,15 @@ export async function getMediumArticles(): Promise<MediumArticle[]> {
 
       const categories = (item.categories as string[]) || [];
 
+      const rawLink = item.link || "https://blog.becloud.sh";
+      const normalizedLink = rawLink.replace(
+        /^https?:\/\/(www\.)?(medium\.com\/@becloudsh|becloudsh\.medium\.com)/,
+        "https://blog.becloud.sh"
+      );
+
       return {
         title: item.title || "Untitled",
-        link: item.link || "https://becloudsh.medium.com",
+        link: normalizedLink,
         pubDate: item.pubDate || new Date().toISOString(),
         isoDate: item.isoDate,
         categories: categories,
@@ -106,7 +112,7 @@ export async function getMediumArticles(): Promise<MediumArticle[]> {
     });
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.warn("Failed to fetch or parse Medium RSS feed:", error);
+    console.warn("Failed to fetch or parse Blog RSS feed:", error);
     return [];
   }
 }

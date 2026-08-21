@@ -29,4 +29,4 @@ Technical problems often require human solutions. Alongside architecture and sec
 
 - **Email:** [info@becloud.sh](mailto:info@becloud.sh)
 - **LinkedIn:** [Benedikt Scheckenbach](https://www.linkedin.com/in/benedikt-scheckenbach-3493ab1b8/)
-- **Writing & Articles:** [Medium (@becloudsh)](https://medium.com/@becloudsh)
+- **Writing & Articles:** [Medium (@becloudsh](https://blog.becloud.sh)
